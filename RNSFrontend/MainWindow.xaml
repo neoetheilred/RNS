@@ -1,0 +1,45 @@
+﻿<Window x:Class="RNSFrontend.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RNSFrontend"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Menu Grid.Row="0" Name="menu">
+            <MenuItem Header="Выбрать основания">
+                <MenuItem Header="Default" Click="SetRnsModules"></MenuItem>
+                <MenuItem Header="Mersenne" Click="SetRnsModules"></MenuItem>
+                <MenuItem Header="Fermat" Click="SetRnsModules"></MenuItem>
+                <Separator/>
+                <MenuItem Header="Задать набор модулей" Click="CusomModules"></MenuItem>
+            </MenuItem>
+            <MenuItem Header="Деление" Name="div">
+                <MenuItem Header="Выполнять с переводом в позиционную СС" IsCheckable="True" Name="checkdiv"></MenuItem>
+            </MenuItem>
+        </Menu>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <TextBox Grid.Column="0" FontSize="30" Name="tb"></TextBox>
+            <Button Grid.Column="1" 
+                    Content="Calculate" 
+                    HorizontalAlignment="Stretch"
+                    FontSize="25"
+                    Click="Calculate"></Button>
+        </Grid>
+        <Label Grid.Row="2" Content="No calculations were performed yet" Name="lb" VerticalAlignment="Stretch"></Label>
+        <ListBox Grid.Row="3" Name="logs" BorderThickness="1" ></ListBox>
+        <Label Grid.Row="4" Name="module_status" VerticalAlignment="Bottom"/>
+    </Grid>
+</Window>
