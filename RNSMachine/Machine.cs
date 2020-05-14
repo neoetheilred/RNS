@@ -5,6 +5,9 @@ using RNSLib;
 
 namespace RNSMachine
 {
+    /// <summary>
+    /// Реализация виртуальной машины
+    /// </summary>
     public partial class Machine
     {
         private byte[] _code;

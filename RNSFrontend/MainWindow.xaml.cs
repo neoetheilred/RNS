@@ -108,7 +108,7 @@ namespace RNSFrontend
                                 content.IsReadOnly = true;
                                 content.BorderThickness = new Thickness(0,0,0,0);
                                 content.TextWrapping = TextWrapping.Wrap;
-                                content.Text = $"{state.A}\r\n{state.B}\r\nДействие: {state.LastExecuted}";
+                                content.Text = $"{state.A}\r\n{state.B}\r\nДействие: {state.LastExecuted}\r\nРезультат: {state.R}";
                                 content.Width = item.Width;
                                 item.Content = content;
                                 logs.Items.Add(item);

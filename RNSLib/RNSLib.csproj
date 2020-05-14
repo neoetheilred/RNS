@@ -55,5 +55,8 @@
     <Compile Include="RNSNumber.StaticProducers.cs" />
     <Compile Include="RNSNumberUtility.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Diagram.cd" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

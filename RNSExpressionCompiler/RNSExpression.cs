@@ -6,6 +6,9 @@ using RNSLib;
 
 namespace RNSExpressionCompiler
 {
+    /// <summary>
+    /// Предоставляет функционал для обработки арифметических выражений
+    /// </summary>
     public class RNSExpression
     {
         private TextWriter _sw;
@@ -36,6 +39,7 @@ namespace RNSExpressionCompiler
                 listener = new ExpressionCompiler(_sw, RNSModuleSets.GetModuleSet(RNSModuleSets.ModuleSets.Default), _check);
             }
 
+            IParseTree r = parser.r();
             ParseTreeWalker walker = new ParseTreeWalker();
             walker.Walk(listener, parser.r());
         }

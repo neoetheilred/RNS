@@ -106,7 +106,7 @@ namespace RNSLib
                 }
                 catch (RNSException e)
                 {
-                    throw new RNSException($"Целочисленное деление невозможно: {e.Message}");
+                    throw new RNSException($"Целочисленное деление невозможно");
                 }
             }
 
