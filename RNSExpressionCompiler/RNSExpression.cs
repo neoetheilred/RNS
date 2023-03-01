@@ -41,7 +41,7 @@ namespace RNSExpressionCompiler
 
             IParseTree r = parser.r();
             ParseTreeWalker walker = new ParseTreeWalker();
-            walker.Walk(listener, parser.r());
+            walker.Walk(listener, r);
         }
     }
 }
